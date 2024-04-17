@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditt CV | Om sidan</title>
+    <!--Länk till script-fil-->
+    <script src="js/api.js" type="module"></script>
+    <!--Länk till css-fil-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--Länk till google-fonts typsnitt-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+    <header>
+        <h1>CV-listan</h1>
+        <!--Centrerar kategorivalen-->
+        <nav class="center">
+            <ul>
+                <li><a href="index.html" id="cv-btn">Ditt CV</a></li>
+                <li><a href="add.html" id="add-btn">Lägg till</a></li>
+                <li><a href="about.html" class="underlined" id="about-btn">Om sidan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Huvudinnehåll-->
+    <main id="main">
+        <!--Linje för stil-->
+        <div id="line"></div>
+        <!--Information om sidan-->
+        <article id="about">
+            <h2>Ditt CV</h2>
+            <p>På den här webbplatsen kan du lagra ditt CV i form av anställningar med Företagsnamn, arbetstitel, ort, start och sluttid 
+                för anställningen samt en längre beskrivning av arbetet. Inläggen sparas i en mongoDB-databas med hjälp av ett api. Inläggen 
+                ligger synligt för alla som använder sidan och skriv därför inte in känslig information.</p>
+            <h4>Uppgift</h4>
+            <p>Webbplatsen är en del av moment3 i kursen backend-baserad webbutveckling som går ut på att skapa ett api 
+                i en expresserver som kan hantara Fetch-anrop med get, post, put och delete. Denna api ska också kunna skicka 
+                och hämta data från en mongoDb-databas och skicka vidare svaren till denna webbplats. Så här har jag löst det:</p>
+                <ul>
+                    <li>Jag har skapat en MariaDB-databas som är hostad hos HelioHost.</li>
+                    <li>Node.js, expresserver hostad hos Azure som vid Fetch-anrop skickar frågor till databasen och svarar webbplatsen. Tillägget mongoose används i expresserver för anslutning till mongoDb.</li>
+                    <li>Denna webbplats är hostad hos Netlify för att visa funktionen hos api och som skickar anropen get för att hämta cv, post för att skapa nya från formuläret och delete för att ta bort enskilda inlägg. 
+                        Utöver den funktionaliteten kan api också hantera put för att redigera ett helt inlägg eller enskilda värden.
+                    </li>
+                </ul>
+            <p>En mer ingående beskrivning av api-funktionerna och hur den används hittar du <a href="https://github.com/MarkusVickman/dt207g-moment3">här.</a></p>
+            <h4>Sammanfattning</h4>
+            <p>Det känns som användbart med apier och det går smidigt att på ett säkert sätt nå databaser. Att skapa lösningen för mongoDb-databasen var enklare än att göra samma uppgift med mySQL. Eftersom att moment2 av denna uppgift 
+                använde likadan frontend lösning. Jag ändrade bara i en JavaScript-loop för att skriva ut på startsidan så att rätt namn användes. Mongoose var också enkelt att arbeta 
+                med. Apin är publicerad på Azure och mongoDb-databasen ligger på Atlas. Atlas och mongoDb har varit en enkel och bra upplevelse att arbeta med. Allt som allt en lärorik upplevelse. 
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>
