@@ -172,12 +172,12 @@ form {
 
 /*textstyling för att visa notiser på sidorna*/
 #alert {
-    color: rgb(213, 4, 4);
+    color: rgb(255, 80, 80);
 }
 
 /*textstyling för att visa notiser på sidorna*/
 #alert2 {
-    color: green;
+    color: rgb(50, 255, 50);
 }
 
 /*Media querie för extra små skärmar*/
